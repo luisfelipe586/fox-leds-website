@@ -1,0 +1,258 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto para todo o site */
+    color: #fff; /* Cor do texto em branco */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000; /* Preto */
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+nav a {
+    text-decoration: none;
+    color: #FF6600; /* Laranja */
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF9900; /* Laranja mais claro */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Seções (exemplo de 'produtos', 'clientes', 'contato') */
+section {
+    background-color: #000; /* Fundo preto para a seção */
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Efeito de fade-in */
+}
+
+/* Títulos das seções */
+section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FF6600; /* Laranja */
+    transform: translateY(20px);
+    animation: slideInUp 0.6s ease-out forwards; /* Efeito de animação do título */
+}
+
+/* Caixa de Produtos, Projetos e Clientes */
+.box {
+    background-color: #222; /* Caixa com fundo mais escuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.6s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover na caixa */
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* Produtos */
+.produto-item {
+    margin: 15px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.produto-item h3 {
+    color: #FF6600; /* Laranja */
+    margin-top: 15px;
+}
+
+.produto-item p {
+    margin: 10px 0;
+}
+
+.produto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Projetos */
+.projeto-item {
+    margin: 15px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.projeto-item h3 {
+    color: #FF6600; /* Laranja */
+    margin-top: 15px;
+}
+
+.projeto-item p {
+    margin: 10px 0;
+}
+
+.projeto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Clientes */
+.cliente-item {
+    margin: 15px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cliente-item h3 {
+    color: #FF6600; /* Laranja */
+    margin-top: 15px;
+}
+
+.cliente-item p {
+    margin: 10px 0;
+}
+
+.cliente-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Página de Contato - Caixa de Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+form input,
+form textarea {
+    background-color: #111;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #FF6600; /* Laranja */
+    outline: none;
+}
+
+form button {
+    background-color: #FF6600; /* Laranja */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FF9900; /* Laranja mais claro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #000; /* Preto */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+/* Animação de Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animação de Slide-up */
+@keyframes slideInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .box {
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
